@@ -28,7 +28,7 @@ public class main {
 			System.out.println("Enter last name of student "+(i+1)+": ");
 			s[i].setLast_name(in.next());
 		
-			do{
+			do {
 				System.out.println("Enter age of student "+(i+1)+": ");
 			} while (s[i].setAge(in.nextInt())==false);
 			
@@ -58,13 +58,23 @@ public class main {
 						if (tempID.equals(s[i].getStudentNum())) {
 							System.out.println("Student found!");
 							temp = true;
-							System.out.println("Enter a new average: ");
-							s[i].setAvg(in.nextDouble());
-							System.out.println("Enter a new age: ");
-							s[i].setAge(in.nextInt());
+							
+							System.out.println("Enter student's new last name: ");
+							s[i].setLast_name(in.next());
+							do {
+								System.out.println("Enter student's new age: ");
+							} while (s[i].setAge(in.nextInt())==false);
+							
+							do {
+								System.out.println("Enter student's new student number: ");
+							} while (s[i].setStudentNum(in.next())==false);
+							do {
+								System.out.println("Enter student's new average: ");
+							} while (s[i].setAvg(in.nextDouble())==false);
+							i=s.length;
 						}
 					}
-					if (temp = false)
+					if (temp == false)
 						System.out.println("Incorrect ID.");
 				} while(temp==false);
 			}
@@ -80,7 +90,7 @@ public class main {
 			
 			else if (menuOption == 3) {
 				for (int i = 0; i<s.length;i++)
-					System.out.println(s[i].getLast_name());
+					s[i].printData();
 			}
 			
 			else if (menuOption == 4) {

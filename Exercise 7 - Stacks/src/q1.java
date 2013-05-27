@@ -2,9 +2,6 @@ import java.util.Scanner;
 import java.util.Stack;
 public class q1 {
 
-  /**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		Fraction f;
 		Scanner in = new Scanner(System.in);
@@ -14,13 +11,13 @@ public class q1 {
 		int size;
 		Fraction temp = new Fraction();
 		do {
-			f=new Fraction();//refers to same object otherwise...odd.
+			f=new Fraction();
 			System.out.println("Enter a numerator: ");
 			f.num = in.nextInt();
 			System.out.println("Enter a denominator:");
 			f.den = in.nextInt();
 			s.push(f);
-			System.out.println("Press 'y' to continue.");
+			System.out.println("Press 'y' to continue. Enter any other key to stop.");
 			x = in.next();
 			if (x.equals("y"))
 				willContinue = true;
@@ -30,14 +27,8 @@ public class q1 {
 		size = s.size();
 		for (int i = 0; i<size;i++) {
 			temp = (Fraction)s.pop();
-			System.out.println(temp.num);
-			System.out.println(temp.den);
+			System.out.println("Numerator: "+temp.num);
+			System.out.println("Denominator: "+temp.den);
 		}
-		
-			
-		
-		
-
 	}
-
 }

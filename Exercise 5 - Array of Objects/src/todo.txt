@@ -1,2 +1,0 @@
--allow user to edit more fields
--do checks

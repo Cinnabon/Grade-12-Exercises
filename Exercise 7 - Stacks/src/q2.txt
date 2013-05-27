@@ -1,16 +1,38 @@
 2.  In addition to the instance methods pop, push, and isEmpty, test and describe the functionality of the following instance methods in ‘Stack’. Note that some methods are overloaded. 
-a.	add 
--add(object)Appends the specified element to the end of this Vector.
--add(int index, object)Inserts the specified element at the specified position in this Vector. Shifts the element currently at that position (if any) and any subsequent elements to the right (adds one to their indices). 
+a.	add (overloaded)
+-add(Object e): Appends the specified element to the end of this Vector.
+-add(int index, Object e): Inserts the specified element at the specified position in this Vector. Shifts the element currently at that position (if any) and any subsequent elements to the right (adds one to their indices). 
+
 b.	capacity
--Returns the current capacity of this vector
+-capacity(): Returns the current capacity of this vector
+
 c.	contains
+-contains(Object o): Returns true if this vector contains the specified element. More formally, returns true if and only if this vector contains at least one element e such that (o==null ? e==null : o.equals(e)).
 
 d.	elementAt
+-elementAt(int index): Returns the component at the specified index. This method is identical in functionality to the get(int) method (which is part of the List interface).
+
 e.	empty
+-empty(): Tests if this stack is empty; returns true if and only if this stack contains no items; false otherwise.
+
 f.	equals
-g.	indexOf
+-equals(Object o): Compares the specified Object with this Vector for equality. Returns true if and only if the specified Object is also a List, both Lists have the same size, and all corresponding pairs of elements in the two Lists are equal. (Two elements e1 and e2 are equal if (e1==null ? e2==null : e1.equals(e2)).) In other words, two Lists are defined to be equal if they contain the same elements in the same order.
+
+g.	indexOf (overloaded)
+-indexOf(Object o): Returns the index of the first occurrence of the specified element in this vector, or -1 if this vector does not contain the element. More formally, returns the lowest index i such that (o==null ? get(i)==null : o.equals(get(i))), or -1 if there is no such index.
+-indexOf(Object o, int index): Returns the index of the first occurrence of the specified element in this vector, searching forwards from index, or returns -1 if the element is not found. More formally, returns the lowest index i such that (i >= index && (o==null ? get(i)==null : o.equals(get(i)))), or -1 if there is no such index.
+
 h.	lastElement
+-lastElement(): Returns the last component of the vector.
+
 i.	lastIndexOf
+-lastIndexOf(Object o): Returns the index of the last occurrence of the specified element in this vector, or -1 if this vector does not contain the element. More formally, returns the highest index i such that (o==null ? get(i)==null : o.equals(get(i))), or -1 if there is no such index.
+-lastIndexOf(Object o, int index): Returns the index of the last occurrence of the specified element in this vector, searching backwards from index, or returns -1 if the element is not found. More formally, returns the highest index i such that (i <= index && (o==null ? get(i)==null : o.equals(get(i)))), or -1 if there is no such index.
+
 j.	peek
-k.	remove
+peek(): Looks at the object at the top of this stack without removing it from the stack.
+
+k.	remove (overloaded)
+remove(int index): Removes the element at the specified position in this Vector. Shifts any subsequent elements to the left (subtracts one from their indices). Returns the element that was removed from the Vector.
+remove(Object o): Removes the first occurrence of the specified element in this Vector If the Vector does not contain the element, it is unchanged. More formally, removes the element with the lowest index i such that (o==null ? get(i)==null : o.equals(get(i))) (if such an element exists). Returns false if the specified object is not found.
+
