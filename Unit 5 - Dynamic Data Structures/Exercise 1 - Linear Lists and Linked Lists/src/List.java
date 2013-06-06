@@ -1,6 +1,8 @@
 
 public class List {
 	private Fraction head;
+	
+	
 	/**
 	 * will insert a fraction at the end of the Linked List
 	 * @param f
@@ -88,7 +90,66 @@ public class List {
 		System.out.println("def: "+temp.den);
 	}
 	
+	/**
+	 *returns num from the xth fraction in the linked list. This method will return -1 if the there is no xth fraction
+	 * @author Clement
+	 */
+	public int getNum(int x) {
+		int num = -1;
+		Fraction temp = head;
+		for (int i = 1;i<x;i++) {
+			temp = temp.link;
+			if (temp.link==null)
+				i=x;
+		}
+		if (temp!=null)
+			num = temp.num;
+		return num;
+	}
 	
+	/**
+	 * assigns num from the xth fraction in the linked list to n
+	 * @author 605920
+	 */
+	public void putNum(int x, int n) {
+		Fraction temp = head;
+		for (int i = 1; i<x;i++) {
+			temp = temp.link;
+		}
+		temp.num = n;
+	}
+	
+	/**
+	 * This method returns den from the xth fraction in the linked list. 
+	 * This method will return -1 if the there is no xth fraction.
+	 * @param x
+	 * @return
+	 */
+	public int getDen(int x) {
+		int den = -1;
+		Fraction temp = head;
+		for (int i = 1;i<x;i++) {
+			temp = temp.link;
+			if (temp.link==null)
+				i=x;
+		}
+		if (temp!=null)
+			den = temp.den;
+		return den;
+	}
+	
+	/**
+	 * This method assigns den from the xth fraction in the linked list to d
+	 * @param x
+	 * @param d
+	 */
+	public void putDen(int x, int d) {
+		Fraction temp = head;
+		for (int i = 1; i<x;i++) {
+			temp = temp.link;
+		}
+		temp.den = d;
+	}
 	
 	class Fraction {
 		int num;
@@ -108,5 +169,4 @@ public class List {
 		}
 		
 	}
-	
 }
