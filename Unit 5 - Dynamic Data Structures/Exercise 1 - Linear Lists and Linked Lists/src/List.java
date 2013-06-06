@@ -1,4 +1,3 @@
-
 public class List {
 	private Fraction head;
 	
@@ -32,11 +31,15 @@ public class List {
 	 * @param f
 	 */
 	public void addatEnd(Fraction f) {
-		Fraction temp = head;
-		while (temp.link!=null){
-			temp = temp.link;
+		if (head!=null) {
+			Fraction temp = head;
+			while (temp.link!=null){
+				temp = temp.link;
+			}
+			temp.link = f;
 		}
-		temp.link = f;
+		else
+			head = f;
 	}
 	
 	/**
