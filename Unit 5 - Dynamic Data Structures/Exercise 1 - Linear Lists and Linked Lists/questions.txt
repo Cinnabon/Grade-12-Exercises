@@ -1,0 +1,2 @@
+Q: If you make the class fields in fraction private, how will this affect the rest of your code? 
+A: Unless you want to access the fraction's instance fields from the main program, there will be no difference in the rest of the code in List. Otherwise, you would require getters and setters.
