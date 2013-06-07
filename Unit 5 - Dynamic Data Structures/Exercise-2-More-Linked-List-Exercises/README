@@ -3,8 +3,8 @@ The following instance methods were added:
 a.  Sort() – 
 • will sort the fractions in linked list in order of value of the fraction (from smallest to largest)
 
-b.	Insert(fraction f)
+b.	Insert(Fraction f)
 •	will insert the fraction f in the linked list in order of value.
 
-c.	Remove(fraction f)
+c.	Remove(Fraction f)
 •	will search and remove the first fraction in linked list with an identical value. 
