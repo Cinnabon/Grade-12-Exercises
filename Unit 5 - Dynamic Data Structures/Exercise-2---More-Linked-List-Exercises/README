@@ -1,0 +1,10 @@
+The Fraction.java that is located in the source folder is an add-on to the Fraction.java located in the source folder of Exercise 1.
+The following instance methods were added:
+a.  Sort() – 
+•	will sort the fractions in linked list in order of value of the fraction (from smallest to largest)
+
+b.	Insert(fraction f)
+•	 will insert the fraction f in the linked list in order of value.
+
+c.	Remove(fraction f)
+•	will search and remove the first fraction in linked list with an identical value. 
