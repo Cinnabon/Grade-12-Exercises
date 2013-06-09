@@ -1,7 +1,7 @@
 public class List {
 	private Fraction head;
 	
-	
+	//HI MY NAME IS...MY NAME IS...MY NAME IS CHICA CHICA SLIM SHADY
 	/**
 	 * will insert a fraction at the end of the Linked List
 	 * @param f
